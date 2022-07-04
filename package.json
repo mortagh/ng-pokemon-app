@@ -25,6 +25,7 @@
     "@angular-devkit/build-angular": "^14.0.1",
     "@angular/cli": "~14.0.1",
     "@angular/compiler-cli": "^14.0.0",
+    "angular-in-memory-web-api": "^0.14.0",
     "typescript": "~4.7.2"
   }
 }

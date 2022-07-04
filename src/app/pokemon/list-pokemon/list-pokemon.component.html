@@ -1,0 +1,36 @@
+<!-- <input
+    #input
+    (keyup.enter)="selectPokemon(input.value)" 
+    type="number"
+/>
+<p *ngIf="pokemonSelected">
+    Vous avez sélectionné le pokemon : {{ pokemonSelected?.name }}
+</p> 
+
+<p *ngIf="!pokemonSelected">
+    Vous avez demandé un pokémon qui n'existe pas.
+</p> -->
+<div class="container">
+    <div class="row">
+        <!-- recherche de pokemon -->
+        <app-search-pokemon></app-search-pokemon>
+        <div class="col m4 s6" *ngFor="let pokemon of pokemonList">
+            <div class="card horizontal" (click)="goToPokemon(pokemon)" pkmnBorderCard>
+                <div class="card-image">
+                    <img [src]="pokemon.picture">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>{{ pokemon.name }}</p>
+                        <p><small>{{pokemon.created | date:"dd/MM/yy"}}</small></p>
+                        <span *ngFor="let type of pokemon.types" class=" {{type | pokemonTypeColor}}"> {{ type }} </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="btn-floating btn-large waves-effect waves-light red z-depth-3"
+style="position: fixed; bottom: 25px; right: 25px;"
+routerLink="/pokemon/add"
+>➕</a>
