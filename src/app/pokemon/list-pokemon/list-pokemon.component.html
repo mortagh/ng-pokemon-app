@@ -14,7 +14,7 @@
     <div class="row">
         <!-- recherche de pokemon -->
         <app-search-pokemon></app-search-pokemon>
-        <div class="col m4 s6" *ngFor="let pokemon of pokemonList">
+        <div class="col m4 s6 pointer" *ngFor="let pokemon of pokemonList">
             <div class="card horizontal" (click)="goToPokemon(pokemon)" pkmnBorderCard>
                 <div class="card-image">
                     <img [src]="pokemon.picture">

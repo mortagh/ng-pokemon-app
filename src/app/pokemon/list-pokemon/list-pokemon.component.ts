@@ -6,8 +6,7 @@ import { PokemonService } from '../pokemon.service';
 @Component({
   selector: 'app-list-pokemon',
   templateUrl: './list-pokemon.component.html',
-  styles: [
-  ]
+  styleUrls: ['./list-pokemon.component.css']
 })
 export class ListPokemonComponent implements OnInit {
   pokemonList: Pokemon[]

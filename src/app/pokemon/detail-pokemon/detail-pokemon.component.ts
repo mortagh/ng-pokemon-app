@@ -6,8 +6,7 @@ import { PokemonService } from '../pokemon.service';
 @Component({
   selector: 'app-detail-pokemon',
   templateUrl: './detail-pokemon.component.html',
-  styles: [
-  ]
+  styleUrls: ['./pokemon-form.component.css']
 })
 export class DetailPokemonComponent implements OnInit {
 
